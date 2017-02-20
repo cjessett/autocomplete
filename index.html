@@ -1,7 +1,7 @@
 <html>
   <head>
     <style>
-      .hide { display: hidden; }
+      .hide { display: none; }
     </style>
   </head>
   <body>
@@ -21,13 +21,13 @@
     <input name="email" required placedholder="email" autocomplete="email">
 
     <script>
-      function onChange(e) {
+      function onChange (e) {
         e.preventDefault();
-        console.log(e.target.name + ':' + e.target.value);
+        console.log(e.target.name + ":" + e.target.value);
       };
-      document.getElementsByTagName('input').forEach(function(i) {
-        i.addEventListener(onChange)
-    )}
+      document.getElementsByClassName("hide").forEach(function(i) {
+        i.addEventListener(onChange(e));
+      )};
     </script>
   </body>
 </html>
