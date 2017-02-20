@@ -1,30 +1,33 @@
 <html>
+  <head>
+    <style>
+      .hide { display: hidden; }
+    </style>
+  </head>
   <body>
-<label for="frmNameCC">Name on card</label>
-<input name="ccname" id="frmNameCC" required placeholder="Full Name"
-                                              autocomplete="cc-name">
+    <label class="hide" for="frmNameCC">Name on card</label>
+    <input class="hide" name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">
 
-<label for="frmCCNum">Card Number</label>
-<input name="cardnumber" id="frmCCNum" required autocomplete="cc-number">
+    <label class="hide" for="frmCCNum">Card Number</label>
+    <input class="hide" name="cardnumber" id="frmCCNum" required autocomplete="cc-number">
 
-<label for="frmCCCVC">CVC</label>
-<input name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
+    <label class="hide" for="frmCCCVC">CVC</label>
+    <input class="hide" name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
 
-<label for="frmCCExp">Expiry</label>
-<input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY"
-                                            autocomplete="cc-exp">
-<input name="name" required placehoder="Name" automplete="name">
-<input name="email" required placedholder="email autocomplete="email">
+    <label class="hide" for="frmCCExp">Expiry</label>
+    <input class="hide" name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
 
-<script>
-function onChange(e) {
-  e.preventDefault();
-  console.log(e.target.name + ':' + e.target.value);
-};
-document.getElementsByTagName('input').forEach(function(i) {
-  i.addEventListener(onChange)
-}
-</script>
+    <input name="name" required placehoder="Name" automplete="name">
+    <input name="email" required placedholder="email" autocomplete="email">
+
+    <script>
+      function onChange(e) {
+        e.preventDefault();
+        console.log(e.target.name + ':' + e.target.value);
+      };
+      document.getElementsByTagName('input').forEach(function(i) {
+        i.addEventListener(onChange)
+    )}
+    </script>
   </body>
 </html>
-
